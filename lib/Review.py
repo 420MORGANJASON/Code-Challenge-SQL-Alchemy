@@ -1,14 +1,21 @@
 class Customer:
+    
+#__init__(self, given_name, family_name): This is the constructor
+# method that initializes a customer object with the 
+# given name and family name.    
     def __init__(self, given_name, family_name):
         self._given_name = given_name
         self._family_name = family_name
 
+#This method returns the given name of the customer.
     def given_name(self):
         return self._given_name
 
+# This method returns the family name of the customer.
     def family_name(self):
         return self._family_name
 
+# This method returns the full name of the customer by combining the given name and family name.
     def full_name(self):
         return f"{self._given_name} {self._family_name}"
 
@@ -24,7 +31,8 @@ class Review:
 
     def rating(self):
         return self._rating
-
+    
+#This method returns the customer object associated with the review.
     def customer(self):
         return self._customer
 
@@ -35,6 +43,8 @@ class Review:
     def all(cls):
         return cls.all_reviews
 
+#__str__(self): This special method defines the string representation of the review object.
+# It returns a formatted string containing the customer's full name, the restaurant's name, and the rating.
     def __str__(self):
         return f"Review by {self._customer.full_name()} for {self._restaurant.name()}: Rating {self._rating}"
 
@@ -72,13 +82,16 @@ review_restaurant = review.restaurant()
 
 
 # Access the customer's full name and the restaurant's name
-print(review_customer.full_name())  # Output: Morgan Jason
-print(review_restaurant.name())  # Output: The Kenyan Fried Chicken
+print(review_customer.full_name())  
+print(review_restaurant.name())  
 # Access the review's rating
-print(review.rating())  # Output: 9.5
+print(review.rating()) 
 
 # Print the review with customer and restaurant information
-print(review)  # Output: Review by Morgan Jason for The Kenyan Fried Chicken: Rating 9.5
+print(review) 
 
+#__str__(self): This special method defines the string representation
+# of the review object. It returns a formatted string containing the customer's full name,
+# the restaurant's name, and the rating.
 # Get all reviews
 all_reviews = Review.all()

@@ -1,5 +1,8 @@
 class Customer:
     all_customers = []
+    
+#It also creates an empty _reviews list for the customer 
+# and adds the customer instance to the all_customers list.
 
     def __init__(self, given_name, family_name):
         self._given_name = given_name
@@ -7,6 +10,9 @@ class Customer:
         self._reviews = []
         Customer.all_customers.append(self)
 
+
+#The given_name, family_name, and full_name methods are getter 
+# methods that return the corresponding attributes of a customer object.
     def given_name(self):
         return self._given_name
 
@@ -19,6 +25,9 @@ class Customer:
     def num_reviews(self):
         return len(self._reviews)
 
+
+#The find_by_name class method takes a name parameter and searches 
+# for a customer with a matching full name in the all_customers list. If found, it returns the customer object; otherwise, it returns None.
     @classmethod
     def find_by_name(cls, name):
         for customer in cls.all_customers:
@@ -26,6 +35,8 @@ class Customer:
                 return customer
         return None
 
+#The find_all_by_given_name class method takes a name parameter and
+# searches for all customers with a matching given name in the all_customers list. It returns a list of matching customer objects.
     @classmethod
     def find_all_by_given_name(cls, name):
         customers = []
@@ -77,9 +88,14 @@ restaurant = Restaurant("The KENYAN FRIED CHICKEN")
 # Create a review instance
 review = Review(customer, restaurant, 9.5)
 
+#The rating() method of the review object is called 
+# to retrieve the rating value and print it.
 # Access the review's rating
 print(review.rating())  # Output: 9.5
 
+
+#The rating() method of the review object is called to retrieve 
+# the rating value and print it.
 # Get all reviews
 all_reviews = Review.all()
 for review in all_reviews:

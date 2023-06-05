@@ -3,6 +3,10 @@ class Customer:
         self._given_name = given_name
         self._family_name = family_name
 
+
+#The given_name, family_name, and full_name methods are defined.
+# They are getter methods
+# that return the corresponding attributes of a customer object.
     def given_name(self):
         return self._given_name
 
@@ -94,6 +98,9 @@ unique_customers = restaurant.customers()
 print(unique_customers)
 # Output: ['Charlie Chaplin', 'Scar Mkadinali']
 
+
+#The average_star_rating method of the restaurant object is 
+# called to calculate and print the average star rating of the restaurant based on the reviews.
 # Calculate the average star rating for the restaurant
 average_rating = restaurant.average_star_rating()
 print(average_rating)
