@@ -90,13 +90,10 @@ restaurant.add_review(review2)
 all_reviews = restaurant.reviews()
 for review in all_reviews:
     print(review)
-# Output: Review by Charlie Chaplin for KENYAN FRIED CHICKEN: Rating 4.5
-#         Review by Scar Mkadinali for KENYAN FRIED CHICKEN: Rating 3.8
 
 # Get unique customers who reviewed the restaurant
 unique_customers = restaurant.customers()
 print(unique_customers)
-# Output: ['Charlie Chaplin', 'Scar Mkadinali']
 
 
 #The average_star_rating method of the restaurant object is 
@@ -104,4 +101,3 @@ print(unique_customers)
 # Calculate the average star rating for the restaurant
 average_rating = restaurant.average_star_rating()
 print(average_rating)
-# Output: 4.15

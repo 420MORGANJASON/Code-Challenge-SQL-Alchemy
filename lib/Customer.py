@@ -91,7 +91,7 @@ review = Review(customer, restaurant, 9.5)
 #The rating() method of the review object is called 
 # to retrieve the rating value and print it.
 # Access the review's rating
-print(review.rating())  # Output: 9.5
+print(review.rating()) 
 
 
 #The rating() method of the review object is called to retrieve 
@@ -104,13 +104,13 @@ for review in all_reviews:
 # Testing additional functionalities
 
 # Test num_reviews()
-print(customer.num_reviews())  # Output: 1
+print(customer.num_reviews())  
 found_customer = Customer.find_by_name("Morgan Jason")
 if found_customer:
-    print(found_customer.full_name())  # Output: Morgan Jason
+    print(found_customer.full_name())  
 else:
     print("Customer not found.")
 # Test find_all_by_given_name()
 matching_customers = Customer.find_all_by_given_name("Morgan")
 for customer in matching_customers:
-    print(customer.full_name())  # Output: Morgan Jason
+    print(customer.full_name())  
