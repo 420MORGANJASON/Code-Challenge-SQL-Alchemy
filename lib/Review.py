@@ -1,5 +1,5 @@
 class Customer:
-    
+# A customer can have multiple reviews associated with them.
 #__init__(self, given_name, family_name): This is the constructor
 # method that initializes a customer object with the 
 # given name and family name.    
@@ -19,6 +19,10 @@ class Customer:
     def full_name(self):
         return f"{self._given_name} {self._family_name}"
 
+
+#The Review class represents a many-to-one association with both the Customer class
+# and the Restaurant class. Each review is associated with a customer and a restaurant.
+#
 
 class Review:
     all_reviews = []
@@ -95,3 +99,10 @@ print(review)
 # the restaurant's name, and the rating.
 # Get all reviews
 all_reviews = Review.all()
+
+
+#The Review instance is associated with the Customer and Restaurant instances, 
+# and their information is accessed and printed using the respective methods.
+
+#Overall, the relationships and associations in the code show a scenario where customers 
+# can write reviews for restaurants, and each review is associated with a customer and a restaurant.
